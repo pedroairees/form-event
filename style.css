@@ -15,7 +15,7 @@
     box-sizing: border-box;
 }
 
-body, input, button, select, textarea{
+body, input, select, textarea{
     font-family: var(--font-poppins);
 }
 
@@ -62,7 +62,7 @@ form{
     margin-top: 42px;
     background: var(--background-form);
     min-height: 300px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -125,6 +125,7 @@ fieldset legend{
     font-weight: 400;
     line-height: 26px;
     transition: border-color 0.3s ease;
+    transition: border 0.5s;
 }
 
 .input-wrapper textarea{
@@ -134,7 +135,7 @@ fieldset legend{
 
 .input-wrapper input:focus, .input-wrapper textarea:focus,
 .input-wrapper input:hover, .input-wrapper textarea:hover {
-    border-color: #FF1010 !important; /* Muda a cor da borda ao focar */
+    border-color: #211C6A !important; /* Muda a cor da borda ao focar */
 }
 
 .input-wrapper select{
@@ -192,4 +193,36 @@ fieldset legend{
 
 .checkbox-wrapper input:focus + label::before{
     outline: 1px solid black;
+}
+
+footer{
+    background: #F0F0F4;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 64px;
+    margin-bottom: 100px;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #D6D6D6;
+}
+
+footer .button{
+    height: 56px;
+    border-radius: 8px;
+    background: #04D361;
+    font-family: var(--font-archivo);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-branco);
+    border: 0;
+    transition: background 0.5s;
+}
+
+footer .button:hover{
+    background: #04ad50;
+}
+
+input:invalid{
+    border: 1px solid #FF1010;
 }
